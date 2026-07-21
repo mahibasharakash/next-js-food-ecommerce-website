@@ -67,7 +67,6 @@ export default function Header() {
                     { name: 'About Us', href: '/about' },
                     { name: 'Contact Us', href: '/contact' },
                     { name: 'Blogs', href: '/blogs' },
-                    { name: 'Services', href: '/services' },
                     { name: 'Products', href: '/products' },
                     { name: 'Cart [0]', href: '/cart' },
                     { name: 'Login', href: '/login' },
