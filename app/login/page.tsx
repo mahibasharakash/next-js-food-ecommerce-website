@@ -30,7 +30,7 @@ export default function Login() {
                 <Link href="/forgot" className="decoration-0 text-red-500 text-xs"> Forgot Password </Link>
               </div>
               <div className="w-full block mb-5">
-                <button type="button" className="w-full flex justify-center items-center min-h-[45px] max-h-[45px] rounded-sm cursor-pointer bg-gray-200 text-xs font-medium"> Login </button>
+                <button type="button" className="w-full flex justify-center items-center min-h-[45px] max-h-[45px] rounded-sm cursor-pointer bg-gray-200 text-xs font-medium duration-500 hover:text-white hover:bg-green-600"> Login </button>
               </div>
               <div className="w-full block text-center text-xs">
                 Not a member yet? <Link href="/registration" className="decoration-0 text-blue-700 text-xs"> Register now </Link>

@@ -45,7 +45,7 @@ export default function Registration() {
                 </div>
               </div>
               <div className="w-full block mb-5">
-                <button type="button" className="w-full flex justify-center items-center min-h-[45px] max-h-[45px] rounded-sm cursor-pointer bg-gray-200 text-xs font-medium"> Sign Up </button>
+                <button type="button" className="w-full flex justify-center items-center min-h-[45px] max-h-[45px] rounded-sm cursor-pointer bg-gray-200 text-xs font-medium duration-500 hover:text-white hover:bg-green-600"> Sign Up </button>
               </div>
               <div className="w-full block text-center text-xs">
                 Not a member yet? <Link href="/login" className="decoration-0 text-blue-700 text-xs"> Login now </Link>
