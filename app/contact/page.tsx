@@ -1,7 +1,24 @@
+'use client';
+
+import { useState } from "react";
+
 import Link from "next/link";
-import { relative } from "path";
 
 export default function Contact() {
+
+  const [ status, setStatus ] = useState('');
+
+  async function handleFormSubmit(formData:FormData) {
+    setStatus('Sending...');
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+    console.log("Form Data:", { name, email, subject, message });
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setStatus('Message sent successfully!');
+  }
+
   return (
     <div>
 
@@ -21,7 +38,7 @@ export default function Contact() {
       </section>
 
       <section className='px-7 mt-5 flex justify-center items-center'>
-        <div className='max-w-[750px] w-full'>
+        <form action={handleFormSubmit} className='max-w-[750px] w-full'>
           <div className="text-lg mb-2 font-medium block w-full"> Leave Us A Message </div>
           <div className="text-xs mb-5 block w-full"> We’ll aim to get back to your query within the same working day! </div>
           <div className="w-full flex flex-wrap">
@@ -43,11 +60,11 @@ export default function Contact() {
             <textarea name="message" id="message" cols={30} rows={10} className="w-full block rounded-md border border-gray-200 duration-500 ring-0 focus-within:ring-2 ring-green-700 outline-0 p-3.5" required autoComplete="off"></textarea>
           </div>
           <div className="block w-full">
-            <button type="button" className="bg-gray-100 flex justify-center items-center w-full min-h-[45px] max-h-[45px] duration-500 hover:bg-green-700 text-black hover:text-white text-black px-4.5 py-2 inline-block cursor-pointer text-xs rounded-sm">
+            <button type="submit" className="bg-gray-100 flex justify-center items-center w-full min-h-[45px] max-h-[45px] duration-500 hover:bg-green-700 text-black hover:text-white text-black px-4.5 py-2 inline-block cursor-pointer text-xs rounded-sm">
               Submit
             </button>
           </div>
-        </div>
+        </form>
       </section>
 
       <section className="px-7 mt-5">
