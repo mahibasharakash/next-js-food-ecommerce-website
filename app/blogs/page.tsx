@@ -80,7 +80,7 @@ export default function Blogs() {
                 </div>
               </div>
             </div>
-            <div className='w-full flex justify-center items-center gap-2'>
+            <div className='w-full flex justify-center items-center gap-2 my-5'>
               <button type="button" className='min-w-[35px] max-w-[35px] min-h-[35px] max-h-[35px] rounded-full text-xs cursor-pointer bg-gray-100 inline-flex justify-center items-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="min-w-[17px] min-h-[17px] max-w-[17px] max-h-[17px]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
